@@ -8,6 +8,15 @@ body, h2{
 	font-weight: 300;
 }
 
+.brand {
+	position: absolute;
+    font-family: 'Rock Salt', cursive;
+    left: 24px;
+    top: 18px;
+    color: #00b7a6;
+    z-index: 100;
+}
+
 a {
 	transition: color 1s;
 	/*list-style: none;*/
@@ -226,6 +235,12 @@ footer .copyright {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 560px) {
+
+	.banner { /* Mobile Banner */
+		background-image: url(assets/banner-the-national-twfm-mobile.jpg);
+		height: 114px;
+	}
+
 	.main-nav ul{
 		display: none;
 	}
@@ -240,7 +255,7 @@ footer .copyright {
 	.mobile-nav {
 		transition:right 250ms linear;
 		display: block !important;
-		position: absolute;
+		position: fixed; /* Prevent horizontal scrolling */
 		font-size: 18px;
     	right: -280px;
     	top: 80px;
@@ -263,11 +278,6 @@ footer .copyright {
 		flex-direction: column-reverse; /* Prevent CTA's stacking,. Order instead img, cta, img, cta */
 	}
 
-	/*TODO REMOVE HEIGHT FROM FOOTER AND FIX SPACE*/
-	footer {
-		/*height: 220px;*/
-	}
-
 	.one-fourth {
 		width: 100%;
 		margin-bottom: 12px;
@@ -285,7 +295,6 @@ footer .copyright {
 
 	.cta-heading {
 		font-size: 1.5em;
-		/*display: none;*/
 	}
 
 	.cta-btn {
