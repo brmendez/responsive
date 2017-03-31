@@ -1,0 +1,296 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body, h2{
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+}
+
+a {
+	transition: color 1s;
+	/*list-style: none;*/
+	text-decoration: none;
+	color: #5dc6e8;
+}
+
+a:hover {
+	color: #000;
+}
+
+ul {
+	list-style: none;
+}
+
+#page {
+	/*max-width: 1100px;*/
+	/*margin: 0 auto;*/
+}
+
+header {
+	/*position: relative;*/
+}
+
+footer {
+	padding: 20px 0 20px 0;
+	background-color: #222c3a;
+	color: #CCC;
+	text-align: center;
+}
+
+.social-links section {
+	transition: background-color 1s;
+	height: 50px;
+}
+
+.social-links section.fb:hover {
+	background-color: #3B5998;
+}
+.social-links section.gp:hover {
+	background-color: #DB4437;
+}
+.social-links section.pint:hover {
+	background-color: #BD091D;
+}
+.social-links section.twit:hover {
+	background-color: #1DA1F2;
+}
+
+.social-links .fb {
+	background: no-repeat center url('assets/svg/fb.svg');
+}
+
+.social-links .gp {
+	background: no-repeat center url('assets/svg/gp.svg');
+}
+
+.social-links .pint {
+	background: no-repeat center url('assets/svg/pint.svg');
+}
+
+.social-links .twit {
+	background: no-repeat center url('assets/svg/twit.svg');
+}
+
+footer .copyright {
+	font-size: 12px;
+	color: #5f9ea0;
+}
+
+.tint {
+	position: absolute;
+	background: rgba(0, 0, 0, .3);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.tint-text { /* TODO FIND ANOTHER WAY TO PRESENT THE CTA IN exit-content-wrapper */
+	color: #FFF !important;
+	border-color: #fff !important;
+}
+
+.one-fourth {
+	width: 24.6%;
+	display: inline-block;
+	background-color: #008b8b;
+}
+
+.one-fourth li {
+}
+
+.main-nav {
+	position: absolute;
+	background: rgba(0,0,0,.4);
+	height: 80px;
+	width: 100%;
+}
+
+.main-nav ul {
+	position: absolute;
+	right: 0;
+	top: 28px;
+}
+
+.main-nav ul li, .mobile-nav ul li {
+	margin: 22px 20px 22px 20px;
+	font-size: 18px;
+	letter-spacing: 6px;
+}
+
+.main-nav ul li {
+	display: inline; /* MOBILE NAV DISPLAYS INCORRECTLY, UNLESS THIS */
+}
+
+.mobile-nav {
+	background: rgba(0,0,0,.4);
+	font-size: 1.5em;
+	width: 280px;
+	height: 100%;
+    text-align: center;
+}
+
+.banner {
+	height: 240px;
+	background-image: url(assets/banner-the-national-twfm.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* KEY FRAME ANIMATION */
+
+@keyframes fadeIn {
+   0% {opacity: 0;}
+   100% {opacity: 1;}
+} 
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.heading {
+	width:50%;
+   	height:400px;
+	background-image: url(assets/band-practice.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.heading-two {
+	background-image: url(assets/hibou-mezz-live-copy.jpg);
+}
+
+.cta {
+	text-align: center;
+}
+
+.main-content-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #00bcd4;
+	/*animation-duration: 3s;*/
+}
+
+.secondary-content-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #00ff95;
+}
+
+.exit-content-wrapper {
+	position: relative;
+	background: url(assets/header-banner-vinyl.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: rgba(0,0,0,.3);
+	height: 275px;
+	display: flex;
+	flex-wrap: wrap;
+	/*background-color: #00ff95;*/
+}
+
+.exit-content-wrapper article, .exit-content-wrapper a {
+	z-index: 100;
+}
+
+.cta {
+	margin: auto;
+}
+
+.cta-heading {
+	font-weight: 300;
+	font-size: 1.75em;
+	margin-bottom: 1em; 
+	text-transform: uppercase;
+}
+
+.cta-btn {
+	transition: background 1s;
+	border: 1px solid #000;
+	border-radius: 4px;
+	padding: 12px 16px 12px 16px;
+	color: #000;
+	font-size: 20px;
+	letter-spacing: 2px;
+	/*background: #000;*/
+}
+
+.cta-btn:hover {
+	background: #000;
+	color: #FFF;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 560px) {
+	.main-nav ul{
+		display: none;
+	}
+	.burger-icon {
+		position: absolute;
+		display: block !important;
+		right: 24px;
+		top: 10px;
+		z-index: 100;
+	}
+	
+	.mobile-nav {
+		transition:right 250ms linear;
+		display: block !important;
+		position: absolute;
+		font-size: 18px;
+    	right: -280px;
+    	top: 80px;
+	}
+
+	.mobile-nav.slideInFromRight {
+		right: 0px;
+	}
+
+	.heading {
+		width: 100%;
+	}
+
+	.cta {
+		margin-top: 40px;
+		margin-bottom: 42px; 
+	}
+
+	.secondary-content-wrapper {
+		flex-direction: column-reverse; /* Prevent CTA's stacking,. Order instead img, cta, img, cta */
+	}
+
+	/*TODO REMOVE HEIGHT FROM FOOTER AND FIX SPACE*/
+	footer {
+		/*height: 220px;*/
+	}
+
+	.one-fourth {
+		width: 100%;
+		margin-bottom: 12px;
+	}
+}
+
+@media screen and (max-width: 610px) {
+	.one-fourth {
+		width: 100%;
+		margin-bottom: .5em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	.cta-heading {
+		font-size: 1.5em;
+		/*display: none;*/
+	}
+
+	.cta-btn {
+		font-size: 18px;
+	}
+}
+
+

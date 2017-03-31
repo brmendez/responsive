@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Responsive</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,600" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <script type="text/javascript" src="animal.js"></script>
+
+    <script src="https://widget.bandsintown.com/main.min.js"></script>
+
+  </head>
+  
+  <body>
+
+    <div id="page">
+        <!-- <div class="tint"></div> -->
+        <header>
+            <a class="burger-icon" style="display: none; font-size: 38px;" href="">&#9776;</a>
+            <nav class="mobile-nav" style="display: none;">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tour</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tour</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>            
+        
+        <section class="banner">
+            <!-- <img src="assets/banner-the-national-twfm.jpg" alt="header image"> -->
+        </section>
+
+        <section class="main-content-wrapper fadeIn">
+            
+            <section class="heading"></section>
+            <aside class="cta">
+                 <h1 class="cta-heading">Never miss a show</h1>
+                 <a class="cta-btn tour-dates-btn" href="">Tour Dates</a>
+            </aside>
+
+        </section>
+
+        <section class="secondary-content-wrapper">
+
+            <aside class="cta">
+                <h1 class="cta-heading">Stay In the loop</h1>
+                <a class="cta-btn mailing-list-btn" href="">Mailing List</a>
+                <!-- <input id="search-value" type="text" name="search" placeholder="search artist"> -->
+                <!-- <input id="search-artist" type="submit" value="submit"> -->
+            </aside>   
+            <section class="heading heading-two"></section>
+
+        </section>
+
+        <section class="exit-content-wrapper">
+            <div class="tint"></div>
+            <article class="cta">
+                <h1 class="cta-heading tint-text">Good Music Begins Here</h1>
+                <a class="cta-btn tint-text" href="">Contact Us</a>
+            </article>   
+        </section>
+
+        <section class="tour-dates">
+            <a class="bit-widget-initializer" data-artist-name="The National" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#00B4B3" data-link-color="#22CB65" data-popup-background-color="#000000" data-background-color="#000000" data-display-limit="15" data-link-text-color="#FFFFFF"></a>
+        </section>
+
+        <footer>
+            <div class="social-links">
+                <section class="fb one-fourth"><!-- <img src="assets/svg/fb.svg" alt=""> --></section>
+                <section class="gp one-fourth"></section>
+                <section class="pint one-fourth"></section>
+                <section class="twit one-fourth"></section>
+            </div>
+            <p class="copyright">&copy; 2017 BANDTOUR</p>
+        </footer>
+
+    </div>
+
+  </body>
+
+</html>
+
+<script>
+
+function get_tour_dates() {
+    var artist = $('#search-value').val();
+    var encodedResult = encodeURI(artist);
+    var url = 'https://rest.bandsintown.com/artists/' + encodedResult + '/events?app_id=tourdates';
+
+    $.ajax({
+        url: url
+    }).done(function(data) {
+        console.log(data);
+    });
+}
+
+
+$('#search-artist').click(get_tour_dates);
+
+$('.burger-icon').click(function(e) {
+    e.preventDefault();
+    $('.mobile-nav').toggleClass('slideInFromRight');
+
+});
+
+$('.cta-btn').click(function(e) {
+    e.preventDefault();
+});
+
+$('.tour-dates-btn').click(function() {
+    $('.tour-dates').slideDown();
+});
+
+
+$(function() {
+    $('.tour-dates').hide();
+})
+</script>
+
+<!-- <iframe src="https://www.bandsintown.com/artist/Passion%20Pit/track_button?size=large&display_tracker_count=true&text_color=%2300B4B3&background_color=%2331465C&hover_color=%23253445" height="32" width="165" scrolling="no" frameborder="0" style="border:none; overflow:hidden"; allowtransparency="true" ></iframe> -->
+<!-- <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script><a class="bit-widget-initializer" data-artist-name="The National" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#00B4B3" data-link-color="#22CB65" data-popup-background-color="#000000" data-background-color="#000000" data-display-limit="15" data-link-text-color="#FFFFFF"></a> -->
