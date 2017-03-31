@@ -37,10 +37,6 @@ ul {
 	/*margin: 0 auto;*/
 }
 
-header {
-	/*position: relative;*/
-}
-
 footer {
 	padding: 20px 0 20px 0;
 	background-color: #222c3a;
@@ -111,7 +107,7 @@ footer .copyright {
 }
 
 .main-nav {
-	position: absolute;
+	position: fixed;
 	background: rgba(0,0,0,.4);
 	height: 80px;
 	width: 100%;
@@ -245,7 +241,7 @@ footer .copyright {
 		display: none;
 	}
 	.burger-icon {
-		position: absolute;
+		position: fixed;
 		display: block !important;
 		right: 24px;
 		top: 10px;
