@@ -33,11 +33,6 @@ ul {
 	list-style: none;
 }
 
-#page {
-	/*max-width: 1100px;*/
-	/*margin: 0 auto;*/
-}
-
 footer {
 	padding: 20px 0 20px 0;
 	background-color: #222c3a;
@@ -238,10 +233,6 @@ footer .copyright {
 	.banner { /* Mobile Banner */
 		background-image: url(assets/banner-the-national-twfm-mobile.jpg);
 		height: 114px;
-	}
-
-	.main-nav {
-		/*background: rgba(0,0,0,0);*/
 	}
 
 	.main-nav ul{

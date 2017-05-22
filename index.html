@@ -9,86 +9,82 @@
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="stylesheet.css" type="text/css">
-
+    <link rel="shortcut icon" href="assets/responsive-design.png" type="image/vnd.microsoft.icon"> <!-- Insert the right type -->
     <script src="https://widget.bandsintown.com/main.min.js"></script>
 
   </head>
   
   <body>
+    <!-- <div class="tint"></div> -->
+    <header>
+        <!-- <a href="index.html"><h3 class="brand">Band Tour</h3></a> -->
+        <a class="burger-icon" style="display: none; font-size: 38px;" href="">&#9776;</a>
+        <nav class="mobile-nav" style="display: none;">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
 
-    <div id="page">
-        <!-- <div class="tint"></div> -->
-        <header>
-            <!-- <a href="index.html"><h3 class="brand">Band Tour</h3></a> -->
-            <a class="burger-icon" style="display: none; font-size: 38px;" href="">&#9776;</a>
-            <nav class="mobile-nav" style="display: none;">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Tour</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>            
+    
+    <section class="banner">
+        <!-- <img src="assets/banner-the-national-twfm.jpg" alt="header image"> -->
+    </section>
 
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Tour</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </header>            
+    <section class="main-content-wrapper fadeIn">
         
-        <section class="banner">
-            <!-- <img src="assets/banner-the-national-twfm.jpg" alt="header image"> -->
-        </section>
+        <section class="heading"></section>
+        <aside class="cta">
+             <h1 class="cta-heading">Never miss a show</h1>
+             <a class="cta-btn tour-dates-btn" href="">Tour Dates</a>
+        </aside>
 
-        <section class="main-content-wrapper fadeIn">
-            
-            <section class="heading"></section>
-            <aside class="cta">
-                 <h1 class="cta-heading">Never miss a show</h1>
-                 <a class="cta-btn tour-dates-btn" href="">Tour Dates</a>
-            </aside>
+    </section>
 
-        </section>
+    <section class="secondary-content-wrapper">
 
-        <section class="secondary-content-wrapper">
+        <aside class="cta">
+            <h1 class="cta-heading">Stay In the loop</h1>
+            <a class="cta-btn mailing-list-btn" href="">Mailing List</a>
+            <!-- <input id="search-value" type="text" name="search" placeholder="search artist"> -->
+            <!-- <input id="search-artist" type="submit" value="submit"> -->
+        </aside>   
+        <section class="heading heading-two"></section>
 
-            <aside class="cta">
-                <h1 class="cta-heading">Stay In the loop</h1>
-                <a class="cta-btn mailing-list-btn" href="">Mailing List</a>
-                <!-- <input id="search-value" type="text" name="search" placeholder="search artist"> -->
-                <!-- <input id="search-artist" type="submit" value="submit"> -->
-            </aside>   
-            <section class="heading heading-two"></section>
+    </section>
 
-        </section>
+    <section class="exit-content-wrapper">
+        <div class="tint"></div>
+        <article class="cta">
+            <h1 class="cta-heading tint-text">Good Music Begins Here</h1>
+            <a class="cta-btn tint-text" href="">Contact Us</a>
+        </article>   
+    </section>
 
-        <section class="exit-content-wrapper">
-            <div class="tint"></div>
-            <article class="cta">
-                <h1 class="cta-heading tint-text">Good Music Begins Here</h1>
-                <a class="cta-btn tint-text" href="">Contact Us</a>
-            </article>   
-        </section>
+    <section class="tour-dates">
+        <a class="bit-widget-initializer" data-artist-name="The National" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#00B4B3" data-link-color="#22CB65" data-popup-background-color="#000000" data-background-color="#000000" data-display-limit="15" data-link-text-color="#FFFFFF"></a>
+    </section>
 
-        <section class="tour-dates">
-            <a class="bit-widget-initializer" data-artist-name="The National" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#00B4B3" data-link-color="#22CB65" data-popup-background-color="#000000" data-background-color="#000000" data-display-limit="15" data-link-text-color="#FFFFFF"></a>
-        </section>
-
-        <footer>
-            <div class="social-links">
-                <section class="fb one-fourth"><!-- <img src="assets/svg/fb.svg" alt=""> --></section>
-                <section class="gp one-fourth"></section>
-                <section class="pint one-fourth"></section>
-                <section class="twit one-fourth"></section>
-            </div>
-            <p class="copyright">&copy; 2017 BRIAN MENDEZ</p>
-        </footer>
-
-    </div>
+    <footer>
+        <div class="social-links">
+            <section class="fb one-fourth"><!-- <img src="assets/svg/fb.svg" alt=""> --></section>
+            <section class="gp one-fourth"></section>
+            <section class="pint one-fourth"></section>
+            <section class="twit one-fourth"></section>
+        </div>
+        <p class="copyright">&copy; 2017 BRIAN MENDEZ</p>
+    </footer>
 
   </body>
 
